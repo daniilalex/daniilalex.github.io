@@ -5,8 +5,8 @@
     width: 750px;
     margin: 0 auto;
   }
-  .slick-prev,
-  .slick-next {
+  .prev,
+  .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -19,22 +19,8 @@
       height: 50px;
     }
   }
-  .slick-next {
+  .next {
     right: -66px;
     left: auto;
-  }
-  .slick-dots {
-    display: flex;
-    justify-content: center;
-    li {
-      width: 40px;
-      color: #c70101;
-      font-size: 42px;
-      margin-left: 40px;
-    }
-
-    button {
-      display: none;
-    }
   }
 }
