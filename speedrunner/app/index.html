@@ -9,7 +9,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/css/bootstrap-reboot.min.css"
     />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script><![endif]-->
     
     <link rel="stylesheet" href="css/font.css" />
     <link rel="stylesheet" href="css/style.min.css" />
@@ -107,6 +108,7 @@
         </div>
       </div>
     </section>
+    
     <section class="consultation">
       <div class="container">
         <h2 class="title title_left">
@@ -135,13 +137,14 @@
           <div><img src="img/slider/slide_2.png" alt="slide"></div>
           <div><img src="img/slider/slide_3.png" alt="slide"></div>
         </div>
+        <button type="button" class="prev"><img src = ../img/slider/chevron-left-solid.png /></button>
+        <button type="button" class="next"><img src = ../img/slider/chevron-right-solid.png /></button>
       </div>
     </section>
 
 
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
     <script src="js/script.js"></script>
   </body>
 </html>
