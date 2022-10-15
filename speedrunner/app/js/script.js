@@ -3,6 +3,10 @@ const slider = tns({
   items: 1,
   slideBy: "page",
   autoplay: false,
+  controls: false,
+  nav: false,
+  speed: 1200,
+  animateDelay: 1000,
 });
 
 document.querySelector(".prev").addEventListener("click", () => {
