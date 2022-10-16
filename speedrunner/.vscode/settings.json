@@ -1,0 +1,8 @@
+{
+  "window.autoDetectColorScheme": true,
+  "files.autoSave": "afterDelay",
+  "workbench.activityBar.visible": true,
+  "editor.wordWrap": "on",
+  "workbench.editor.enablePreview": true,
+  "workbench.layoutControl.enabled": true
+}
