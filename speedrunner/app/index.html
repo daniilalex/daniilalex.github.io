@@ -46,7 +46,7 @@
             <a href="tel:+74999228974" class="header__phone"
               >+370 6 222 3 777</a
             >
-            <button class="button">make a call</button>
+            <button data-modal="consultation" class="button">make a call</button>
           </div>
         </header>
         <div class="promo__wrapper">
@@ -71,7 +71,7 @@
               We will answer all questions
             </div>
           </div>
-          <button class="button button_main">order a CONSULTATION</button>
+          <button data-modal="consultation" class="button button_main">order a CONSULTATION</button>
           <div class="promo__link">
             or
             <a href="#">go to catalog</a>
@@ -222,7 +222,7 @@
                   class="catalog-item__img"
                 />
                 <div class="catalog-item__subtitle">
-                  Polar FT1 heart rate monitor
+                  Polar FT2 heart rate monitor
                 </div>
                 <div class="catalog-item__desc">
                   For the first steps in heart rate training
@@ -264,7 +264,7 @@
                   class="catalog-item__img"
                 />
                 <div class="catalog-item__subtitle">
-                  Polar FT1 heart rate monitor
+                  Polar FT3 heart rate monitor
                 </div>
                 <div class="catalog-item__desc">
                   For the first steps in heart rate training
@@ -662,10 +662,45 @@
       </div>
     </footer>
 
+    <div class="overlay">
+      <div class="modal" id="consultation">
+        <div class="modal__close">&times;</div>
+        <div class="modal__subtitle">Just fill out the application form</div>
+        <div class="modal__desc">and we will call you back within 10 minutes</div>
+        <form class="feed-form feed-form_mt25" id="consultation" action="#" method="post">
+          <input required type="text" placeholder="Name" name="name" />
+          <input required type="number" name="phone" placeholder="Phone" />
+          <input required type="email" name="email" placeholder="Email" />
+          <button type="submit" class="button button_submit">
+            order a consultation
+          </button>
+        </form>
+      </div>
+      <div class="modal" id="order">
+        <div class="modal__close">&times;</div>
+        <div class="modal__subtitle">Your order</div>
+        <div class="modal__desc">Polar FT1 heart rate monitor</div>
+        <form class="feed-form feed-form_mt25" id="order" action="#" method="post">
+          <input required type="text" placeholder="Name" name="name" />
+          <input required type="number" name="phone" placeholder="Phone" />
+          <input required type="email" name="email" placeholder="Email" />
+          <button type="submit" class="button button_submit">
+            buy
+          </button>
+        </form>
+      </div>
+      <div class="modal modal_mini" id="thanks">
+        <div class="modal__close">&times;</div>
+        <div class="modal__subtitle">Thank you for your application!</div>
+        <div class="modal__desc">Our manager will contact you soon!</div>
+      </div>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
     <script src="js/tabs.js"></script>
+    <script src="js/modal.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
