@@ -46,7 +46,9 @@
             <a href="tel:+74999228974" class="header__phone"
               >+370 6 222 3 777</a
             >
-            <button data-modal="consultation" class="button">make a call</button>
+            <button data-modal="consultation" class="button">
+              make a call
+            </button>
           </div>
         </header>
         <div class="promo__wrapper">
@@ -71,7 +73,9 @@
               We will answer all questions
             </div>
           </div>
-          <button data-modal="consultation" class="button button_main">order a CONSULTATION</button>
+          <button data-modal="consultation" class="button button_main">
+            order a CONSULTATION
+          </button>
           <div class="promo__link">
             or
             <a href="#">go to catalog</a>
@@ -135,10 +139,10 @@
           Just fill out the application form <br />
           and we will call you back within 10 minutes
         </div>
-        <form class="feed-form" action="#" method="post">
-          <input required type="text" placeholder="Name" name="name" />
-          <input required type="number" name="phone" placeholder="Phone" />
-          <input required type="email" name="email" placeholder="Email" />
+        <form id="consultation-form" class="feed-form" action="#" >
+          <input type="text" placeholder="Name" name="name" />
+          <input type="number" name="phone" placeholder="Phone" />
+          <input type="email" name="email" placeholder="Email" />
           <button type="submit" class="button button_submit">
             order a consultation
           </button>
@@ -666,8 +670,15 @@
       <div class="modal" id="consultation">
         <div class="modal__close">&times;</div>
         <div class="modal__subtitle">Just fill out the application form</div>
-        <div class="modal__desc">and we will call you back within 10 minutes</div>
-        <form class="feed-form feed-form_mt25" id="consultation" action="#" method="post">
+        <div class="modal__desc">
+          and we will call you back within 10 minutes
+        </div>
+        <form
+          class="feed-form feed-form_mt25"
+          id="consultation"
+          action="#"
+          method="post"
+        >
           <input required type="text" placeholder="Name" name="name" />
           <input required type="number" name="phone" placeholder="Phone" />
           <input required type="email" name="email" placeholder="Email" />
@@ -680,13 +691,16 @@
         <div class="modal__close">&times;</div>
         <div class="modal__subtitle">Your order</div>
         <div class="modal__desc">Polar FT1 heart rate monitor</div>
-        <form class="feed-form feed-form_mt25" id="order" action="#" method="post">
+        <form
+          class="feed-form feed-form_mt25"
+          id="order"
+          action="#"
+          method="post"
+        >
           <input required type="text" placeholder="Name" name="name" />
           <input required type="number" name="phone" placeholder="Phone" />
           <input required type="email" name="email" placeholder="Email" />
-          <button type="submit" class="button button_submit">
-            buy
-          </button>
+          <button type="submit" class="button button_submit">buy</button>
         </form>
       </div>
       <div class="modal modal_mini" id="thanks">
@@ -697,10 +711,12 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
     <script src="js/tabs.js"></script>
     <script src="js/modal.js"></script>
+    <script src="js/validate.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
