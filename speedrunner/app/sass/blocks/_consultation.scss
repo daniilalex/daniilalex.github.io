@@ -9,3 +9,14 @@
     color: #ffffff;
   }
 }
+.error {
+  border: 1px solid red;
+}
+label.error {
+  display: block;
+  color: #ffffff;
+  border: none;
+  text-align: center;
+  margin-bottom: 15px;
+  
+}
