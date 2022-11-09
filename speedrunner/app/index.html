@@ -27,7 +27,11 @@
     <!--[if (lt IE 9)
       ]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script
     ><![endif]-->
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="css/font.css" />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
@@ -564,7 +568,7 @@
       <div class="container container_mini">
         <h2 class="title">customer reviews</h2>
         <div class="feed__content">
-          <div class="feed-items">
+          <div class="feed-items fadeInUp wow" data-wow-duration="2s" data-wow-delay="1s" >
             <img
               src="img/replies/feed_1.png"
               alt="woman"
@@ -585,7 +589,7 @@
               </div>
             </div>
           </div>
-          <div class="feed-items">
+          <div class="feed-items fadeInLeft wow" data-wow-duration="2s" data-wow-delay="3s" >
             <img
               src="img/replies/feed_2.png"
               alt="woman"
@@ -606,7 +610,7 @@
               </div>
             </div>
           </div>
-          <div class="feed-items">
+          <div class="feed-items fadeInRight wow" data-wow-duration="2s" data-wow-delay="4s" >
             <img
               src="img/replies/feed_3.png"
               alt="woman"
@@ -723,6 +727,10 @@
     <script src="js/validate.js"></script>
     <script src="js/smart.js"></script>
     <script src="js/pageup.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/slider.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </body>
 </html>
