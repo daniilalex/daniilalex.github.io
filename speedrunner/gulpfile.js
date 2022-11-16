@@ -1,34 +1,33 @@
-const gulp = require("gulp");
-const browserSync = require("browser-sync");
+import { task, watch, src, dest, parallel } from "gulp";
+import browserSync, { reload, stream } from "browser-sync";
 const sass = require("gulp-sass")(require("sass"));
-const cleanCSS = require("gulp-clean-css");
-const autoprefixer = require("gulp-autoprefixer");
-const rename = require("gulp-rename");
+import cleanCSS from "gulp-clean-css";
+import autoprefixer from "gulp-autoprefixer";
+import rename from "gulp-rename";
 
 //static server to watch index.html
-gulp.task("server", function () {
+task("server", function () {
   browserSync({
     server: {
       baseDir: "app",
     },
   });
-  gulp.watch("app/*.html").on("change", browserSync.reload);
+  watch("app/*.html").on("change", reload);
 });
 
 //compile sass to css, option(compressed sass), rename(.min),autoprefixer,clean $ auto-inject browser
-gulp.task("styles", function () {
-  return gulp
-    .src("app/sass/**/*.+(scss|sass)")
+task("styles", function () {
+  return src("app/sass/**/*.+(scss|sass)")
     .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
     .pipe(rename({ suffix: ".min", prefix: "" }))
     .pipe(autoprefixer())
     .pipe(cleanCSS({ compatibility: "ie8" }))
-    .pipe(gulp.dest("app/css"))
-    .pipe(browserSync.stream());
+    .pipe(dest("app/css"))
+    .pipe(stream());
 });
 //watch styles
-gulp.task("watch", function () {
-  gulp.watch("app/sass/**/*.+(scss|sass)", gulp.parallel("styles"));
+task("watch", function () {
+  watch("app/sass/**/*.+(scss|sass)", parallel("styles"));
 });
 //start gulp
-gulp.task("default", gulp.parallel("watch", "server", "styles"));
+task("default", parallel("watch", "server", "styles"));
