@@ -44,7 +44,7 @@ gulp.task("html", function () {
 });
 //img minimizer
 gulp.task("images", function () {
-  return gulp.src("src/img/").pipe(imagemin()).pipe(gulp.dest("dist/img/"));
+  return gulp.src("src/img/**/*").pipe(imagemin()).pipe(gulp.dest("dist/img/"));
 });
 
 //scripts
